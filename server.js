@@ -1,5 +1,6 @@
 // Requirements
 const express = require('express'); 
+const apiRouter = require('./routes/apiRoutes')
 const htmlRouter = require('./routes/htmlRoutes'); 
 
 // Initialise the app and assign PORT variable
@@ -11,6 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true})); 
 app.use(express.static('public'))
 
+app.use('/api', apiRouter)
 app.use('/', htmlRouter)
 
  // Start the app on the given port
