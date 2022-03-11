@@ -10,10 +10,12 @@ const htmlRouter = require("./routes/htmlRoutes");
 // Initialise the app and assign PORT variable
 const app = express();
 const PORT = process.env.PORT || 3001;
+
 // Middleware
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("/public"));
+app.use(express.static(__dirname + "/public"));
+app.use(express.json());
+
 app.use("/api", apiRouter);
 app.use("/", htmlRouter);
 
