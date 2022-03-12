@@ -43,6 +43,8 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 Once the + icon is showing, a user is able to add a new note to the application and save the note to the list of existing notes. 
 
+The application is created using Javascript, HTML and CSS. Node Express has been used.
+
 The application is deployed using Heroku: https://note-taker-0103.herokuapp.com/
 
 
